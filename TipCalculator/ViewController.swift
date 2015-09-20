@@ -11,9 +11,12 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var amountTextField: UITextField!
+    @IBOutlet weak var customTipTextField: UITextField!
     @IBOutlet weak var tip10Label: UILabel!
     @IBOutlet weak var tip15Label: UILabel!
     @IBOutlet weak var tip20Label: UILabel!
+    @IBOutlet weak var tipCustomLabel: UILabel!
+    @IBOutlet weak var customTipPrecentage: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +47,15 @@ class ViewController: UIViewController {
         tip10Label.text = numberFormatter.stringFromNumber(tip10)
         tip15Label.text = numberFormatter.stringFromNumber(tip15)
         tip20Label.text = numberFormatter.stringFromNumber(tip20)
+        
+        if customTipTextField.text.isEmpty {
+            tipCustomLabel.text = ""
+            customTipPrecentage.text = ""
+        } else {
+            var tipCustom = amount * ((customTipTextField.text as NSString).doubleValue / 100)
+            tipCustomLabel.text = numberFormatter.stringFromNumber(tipCustom)
+            customTipPrecentage.text = customTipTextField.text + "%"
+        }
     }
     
     //Challenge Custom tip
