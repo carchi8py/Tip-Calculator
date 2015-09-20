@@ -26,7 +26,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func calculateTipButtonPressed(sender: AnyObject) {
-        println("tip")
+        var amount = (amountTextField.text as NSString).doubleValue
+        var tip10 = amount * 0.10
+        var tip15 = amount * 0.15
+        var tip20 = amount * 0.20
+        
+        tip10Label.text = tip10.description
+        tip15Label.text = tip15.description
+        tip20Label.text = tip20.description
     }
 
 }
