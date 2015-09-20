@@ -31,9 +31,17 @@ class ViewController: UIViewController {
         var tip15 = amount * 0.15
         var tip20 = amount * 0.20
         
-        tip10Label.text = tip10.description
-        tip15Label.text = tip15.description
-        tip20Label.text = tip20.description
+        //tip10Label.text = tip10.description
+        //tip15Label.text = tip15.description
+        //tip20Label.text = tip20.description
+        
+        // Format the numbers for Currency!
+        
+        let numberFormatter = NSNumberFormatter()
+        numberFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
+        tip10Label.text = numberFormatter.stringFromNumber(tip10)
+        tip15Label.text = numberFormatter.stringFromNumber(tip15)
+        tip20Label.text = numberFormatter.stringFromNumber(tip20)
     }
 
 }
