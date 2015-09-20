@@ -1,1 +1,1 @@
-![](http://i.imgur.com/pWU1Xbl.png)
+![](https://github.com/carchi8py/Tip-Calculator/blob/master/img/1.jpg)
