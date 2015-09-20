@@ -45,6 +45,11 @@ class ViewController: UIViewController {
         tip15Label.text = numberFormatter.stringFromNumber(tip15)
         tip20Label.text = numberFormatter.stringFromNumber(tip20)
     }
+    
+    //Challenge Custom tip
+    //Group -- How much will people pay
+    //Show -- Total ammount
 
 }
+
 
